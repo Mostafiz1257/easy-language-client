@@ -3,6 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const navItems = <>
+        <li>
+
+        </li>
         <NavLink> <li><button className='btn-style'>Home</button></li></NavLink>
         <NavLink> <li ><button className=' btn-style'>Instructor</button></li></NavLink>
         <NavLink> <li><button className=' btn-style'>Classes</button></li></NavLink>
@@ -21,7 +24,12 @@ const Navbar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <a className="font-bold cursor-pointer text-emerald-950  normal-case text-3xl">Easy Language</a>
+                   <div className="avatar lg:mr-2">
+                        <div className="w-16 rounded-full">
+                            <img src="https://i.ibb.co/0FsCw2J/al.webp" />
+                        </div>
+                    </div>
+                    <a className="font-bold cursor-pointer   normal-case text-3xl text-white">Easy Language</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-2">
@@ -29,7 +37,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                <Link> <button className=' btn-style'>Login Now</button></Link>
+                   
+                    <Link> <button className=' btn-style'>Login Now</button></Link>
                 </div>
             </div>
         </>
