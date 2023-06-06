@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const navItems = <>
-       <Link> <li>Home</li></Link>
-       <Link> <li>Instructor</li></Link>
-       <Link> <li>Classes</li></Link>
-       <Link> <li>DashBoard</li></Link>
-       <Link> <li>Logo</li></Link>
-        
+        <Link> <li><button className='btn-style'>Home</button></li></Link>
+        <Link> <li ><button className=' btn-style'>Instructor</button></li></Link>
+        <Link> <li><button className=' btn-style'>Classes</button></li></Link>
+        <Link> <li><button className=' btn-style'>DashBoard</button></li></Link>
+        <Link> <li><button className=' btn-style'>Logo</button></li></Link>
+
     </>
     return (
         <>
@@ -25,12 +25,12 @@ const Navbar = () => {
                     <a className="btn btn-ghost normal-case text-xl">Easy Language</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 gap-5">
+                    <ul className="menu menu-horizontal px-1 gap-2">
                         {navItems}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <Link> <button className=' btn-style'>Login Now</button></Link>
                 </div>
             </div>
         </>
