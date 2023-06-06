@@ -29,7 +29,7 @@ const Navbar = () => {
                             <img src="https://i.ibb.co/0FsCw2J/al.webp" />
                         </div>
                     </div>
-                    <a className="font-bold cursor-pointer   normal-case text-3xl text-white">Easy Language</a>
+                    <a className="font-bold cursor-pointer  normal-case lg:text-4xl text-teal-950	">Easy Language</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-2">
@@ -38,7 +38,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                    
-                    <Link> <button className=' btn-style'>Login Now</button></Link>
+                    <Link to='/login'> <button className=' btn-style'>Login Now</button></Link>
                 </div>
             </div>
         </>
