@@ -1,18 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const navItems = <>
-        <Link> <li><button className='btn-style'>Home</button></li></Link>
-        <Link> <li ><button className=' btn-style'>Instructor</button></li></Link>
-        <Link> <li><button className=' btn-style'>Classes</button></li></Link>
-        <Link> <li><button className=' btn-style'>DashBoard</button></li></Link>
-        <Link> <li><button className=' btn-style'>Logo</button></li></Link>
+        <NavLink> <li><button className='btn-style'>Home</button></li></NavLink>
+        <NavLink> <li ><button className=' btn-style'>Instructor</button></li></NavLink>
+        <NavLink> <li><button className=' btn-style'>Classes</button></li></NavLink>
+        <NavLink> <li><button className=' btn-style'>DashBoard</button></li></NavLink>
 
     </>
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar fixed z-10 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -22,7 +21,7 @@ const Navbar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Easy Language</a>
+                    <a className="font-bold cursor-pointer text-emerald-950  normal-case text-3xl">Easy Language</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-2">
