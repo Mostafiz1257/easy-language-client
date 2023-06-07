@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Navbar = () => {
-    const navItems = <>
-        <li>
+    const { user, logOut } = useContext(AuthContext)
+    const [isOpen, setIsOpen] = useState(false)
+    // const toggle =()=>{
+    //     setIsOpen(value=>!value)
+    // }
 
-        </li>
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+    const navItems = <>
+
         <NavLink> <li><button className='btn-style'>Home</button></li></NavLink>
         <NavLink> <li ><button className=' btn-style'>Instructor</button></li></NavLink>
         <NavLink> <li><button className=' btn-style'>Classes</button></li></NavLink>
@@ -24,7 +36,7 @@ const Navbar = () => {
                             {navItems}
                         </ul>
                     </div>
-                   <div className="avatar lg:mr-2">
+                    <div className="avatar lg:mr-2">
                         <div className="w-16 rounded-full">
                             <img src="https://i.ibb.co/0FsCw2J/al.webp" />
                         </div>
@@ -37,8 +49,26 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                   
-                    <Link to='/login'> <button className=' btn-style'>Login Now</button></Link>
+                    {
+                        user ? <>
+                            <div className="avatar">
+                                <div className="w-12 rounded-full border-2 border-orange-800  ">
+                                    <img className=' cursor-pointer' onClick={() => setIsOpen(!isOpen)} src={user?.photoURL} />
+                                </div>
+                            </div>
+                            <button onClick={handleLogOut} className=' btn-style'>Log Out</button>
+                        </> :
+                            <>
+                                <Link to='/login'> <button className=' btn-style'>Login Now</button></Link>
+                            </>
+
+                    }
+                    {
+                        isOpen &&
+                        <div className=' absolute rounded-xl  overflow-hidden right-5 top-16 w-[10vw] shadow-xl'>
+                            <button onClick={handleLogOut} className=' btn-style'>Log Out</button>
+                        </div>
+                    }
                 </div>
             </div>
         </>
