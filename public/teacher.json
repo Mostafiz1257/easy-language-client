@@ -1,0 +1,63 @@
+[
+    {
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "photo": "https://example.com/johndoe.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "photo": "https://example.com/janesmith.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "David Johnson",
+      "email": "davidjohnson@example.com",
+      "photo": "https://example.com/davidjohnson.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Sarah Wilson",
+      "email": "sarahwilson@example.com",
+      "photo": "https://example.com/sarahwilson.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Michael Brown",
+      "email": "michaelbrown@example.com",
+      "photo": "https://example.com/michaelbrown.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Emily Davis",
+      "email": "emilydavis@example.com",
+      "photo": "https://example.com/emilydavis.jpg",
+      "category": "normal"
+    },
+    {
+      "name": "Daniel Anderson",
+      "email": "danielanderson@example.com",
+      "photo": "https://example.com/danielanderson.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Olivia Martinez",
+      "email": "oliviamartinez@example.com",
+      "photo": "https://example.com/oliviamartinez.jpg",
+      "category": "normal"
+    },
+    {
+      "name": "William Taylor",
+      "email": "williamtaylor@example.com",
+      "photo": "https://example.com/williamtaylor.jpg",
+      "category": "normal"
+    },
+    {
+      "name": "Sophia Clark",
+      "email": "sophiaclark@example.com",
+      "photo": "https://example.com/sophiaclark.jpg",
+      "category": "normal"
+    }
+  ]
+  

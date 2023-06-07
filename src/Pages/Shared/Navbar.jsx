@@ -5,9 +5,6 @@ import { AuthContext } from '../../Provider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     const [isOpen, setIsOpen] = useState(false)
-    // const toggle =()=>{
-    //     setIsOpen(value=>!value)
-    // }
 
     const handleLogOut = () => {
         logOut()
@@ -18,12 +15,16 @@ const Navbar = () => {
     }
     const navItems = <>
 
-        <NavLink> <li><button className='btn-style'>Home</button></li></NavLink>
-        <NavLink> <li ><button className=' btn-style'>Instructor</button></li></NavLink>
+        <NavLink to='/'> <li><button className='btn-style'>Home</button></li></NavLink>
+        <NavLink to='/instructor'> <li ><button className=' btn-style'>Instructor</button></li></NavLink>
         <NavLink> <li><button className=' btn-style'>Classes</button></li></NavLink>
-        <NavLink> <li><button className=' btn-style'>DashBoard</button></li></NavLink>
-
+        {
+            user? <>
+             <NavLink> <li className=' btn-style'>DashBoard</li></NavLink>
+            </> : <></>
+        }
     </>
+    
     return (
         <>
             <div className="navbar fixed z-10 ">

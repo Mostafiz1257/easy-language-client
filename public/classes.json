@@ -1,0 +1,98 @@
+[
+    {
+        "language": "English",
+        "category":"popular",
+        "image": "english_image.jpg",
+        "instructor_Name": "John Doe",
+        "available_seats": 30,
+        "course_price": 99
+    },
+    {
+        "language": "Spanish",
+        "category":"popular",
+        "image": "spanish_image.jpg",
+        "instructor_Name": "Maria Garcia",
+        "available_seats": 25,
+        "course_price": 149
+    },
+    {
+        "language": "French",
+        "className": "French for Beginners",
+        "image": "french_image.jpg",
+        "instructor_Name": "Sophie Martin",
+        "available_seats": 20,
+        "course_price": 199
+    },
+    {
+        "language": "German",
+        "category":"popular",
+        "image": "german_image.jpg",
+        "instructor_Name": "Hans Müller",
+        "available_seats": 15,
+        "course_price": 149
+    },
+    {
+        "language": "Mandarin Chinese",
+        "category":"popular",
+        "image": "chinese_image.jpg",
+        "instructor_Name": "Li Wei",
+        "available_seats": 10,
+        "course_price": 199
+    },
+    {
+        "language": "Japanese",
+        "category":"popular",
+        "image": "japanese_image.jpg",
+        "instructor_Name": "Yuki Tanaka",
+        "available_seats": 20,
+        "course_price": 149
+    },
+    {
+        "language": "Saudia",
+        "category":"normal",
+        "image": "japanese_image.jpg",
+        "instructor_Name": "Ilahi Khan",
+        "available_seats": 20,
+        "course_price": 149
+    },
+    {
+        "language": "Russian",
+        "category":"normal",
+        "image": "japanese_image.jpg",
+        "instructor_Name": "Niyo Naka",
+        "available_seats": 20,
+        "course_price": 149
+    },
+    {
+        "language": "Indonesia",
+        "category":"popular",
+        "image": "japanese_image.jpg",
+        "instructor_Name": "Abbi Gaggi",
+        "available_seats": 20,
+        "course_price": 149
+    },
+    {
+        "language": "chaina",
+        "category":"normal",
+        "image": "japanese_image.jpg",
+        "instructor_Name": "Yong Kanaka",
+        "available_seats": 20,
+        "course_price": 149
+    },
+    {
+        "language": "Bangla",
+        "category":"normal",
+        "image": "japanese_image.jpg",
+        "instructor_Name": "Yuki Tanaka",
+        "available_seats": 20,
+        "course_price": 149
+    },
+    {
+        "language": "Indian",
+        "category":"normal",
+        "image": "japanese_image.jpg",
+        "instructor_Name": "Hera jasta",
+        "available_seats": 20,
+        "course_price": 149
+    }
+]
