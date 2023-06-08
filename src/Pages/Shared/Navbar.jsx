@@ -7,17 +7,13 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     const handleLogOut = () => {
-        logOut()
-            .then(() => { })
-            .catch(error => {
-                console.log(error.message);
-            })
+        logOut()  
     }
     const navItems = <>
 
         <NavLink to='/'> <li><button className='btn-style'>Home</button></li></NavLink>
-        <NavLink to='/instructor'> <li ><button className=' btn-style'>Instructor</button></li></NavLink>
-        <NavLink> <li><button className=' btn-style'>Classes</button></li></NavLink>
+        <NavLink to='/allInstructors'> <li ><button className=' btn-style'>Instructor</button></li></NavLink>
+        <NavLink to='/allClasses'> <li><button className=' btn-style'>Classes</button></li></NavLink>
         {
             user? <>
              <NavLink> <li className=' btn-style'>DashBoard</li></NavLink>

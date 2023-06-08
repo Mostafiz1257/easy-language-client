@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import Classes from './Classes';
+import Classes from '../Home/PopularInstructor/Classes/Classes';
 
-const PopularClasses = () => {
+const AllClasses = () => {
     const [classes, setClasses] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
-            .then(data => {
-                const popularClasses = data.filter(item => item.category === 'popular')
-                setClasses(popularClasses)
-            })
+            .then(data => setClasses(data))
     }, [])
+
     return (
         <>
-            <div className='my-12'>
-                <p className=' text-3xl font-bold text-center text-orange-800 underline underline-offset-4'>Popular Classes</p>
+            <div className=' pt-12'>
+                <h2 className=' title '>Total Course Class</h2>
             </div>
             <div className=' grid lg:grid-cols-3 gap-5'>
                 {
@@ -25,4 +23,4 @@ const PopularClasses = () => {
     );
 };
 
-export default PopularClasses;
+export default AllClasses;

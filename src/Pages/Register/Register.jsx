@@ -1,19 +1,37 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../components/SocialLogin/SocialLogin';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     const { updateUserProfile, createUser } = useContext(AuthContext)
     const { register, handleSubmit, reset, } = useForm();
+    const navigate = useNavigate()
     const onSubmit = data => {
         console.log(data);
         createUser(data.email, data.password)
-            .then(result => {
-                const createdUser = result.user
-                console.log(createdUser)
+            .then(() => {
+ 
                 updateUserProfile(data.name, data.PhotoURL)
+                const saveUser = { name: data.name, email: data.email }
+                console.log(saveUser);
+                fetch('http://localhost:5000/users',{
+                    method:'POST',
+                    headers:{
+                        'content-type':'application/json'
+                    },
+                    body:JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            reset();
+                            Swal.fire('Successfully login In')
+                            navigate('/')
+                        }
+                    })
             })
             .catch(error => {
                 console.log(error.message);
@@ -40,15 +58,15 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="email"  {...register('email', { required: true,  })} className="input input-bordered" required />
-                           
+                            <input type="email" placeholder="email"  {...register('email', { required: true, })} className="input input-bordered" required />
+
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password"  {...register('password', { required: true ,minLength: 6})} className="input input-bordered" required />
-                           
+                            <input type="password" placeholder="password"  {...register('password', { required: true, minLength: 6 })} className="input input-bordered" required />
+
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -56,7 +74,7 @@ const Register = () => {
                             </label>
                             <input type="password" placeholder="password"  {...register('confirm_Password', { required: true })} className="input input-bordered" required />
                         </div>
-                      
+
                         <div className="form-control mt-6">
                             <button className="btn border-orange-800 text-[#795548] btn-outline hover:bg-[#795548]">Register</button>
                         </div>

@@ -20,7 +20,7 @@
         "className": "French for Beginners",
         "image": "french_image.jpg",
         "instructor_Name": "Sophie Martin",
-        "available_seats": 20,
+        "available_seats": 40,
         "course_price": 199
     },
     {
@@ -28,7 +28,7 @@
         "category":"popular",
         "image": "german_image.jpg",
         "instructor_Name": "Hans Müller",
-        "available_seats": 15,
+        "available_seats": 5,
         "course_price": 149
     },
     {
@@ -36,7 +36,7 @@
         "category":"popular",
         "image": "chinese_image.jpg",
         "instructor_Name": "Li Wei",
-        "available_seats": 10,
+        "available_seats": 13,
         "course_price": 199
     },
     {
@@ -44,7 +44,7 @@
         "category":"popular",
         "image": "japanese_image.jpg",
         "instructor_Name": "Yuki Tanaka",
-        "available_seats": 20,
+        "available_seats": 22,
         "course_price": 149
     },
     {
@@ -52,7 +52,7 @@
         "category":"normal",
         "image": "japanese_image.jpg",
         "instructor_Name": "Ilahi Khan",
-        "available_seats": 20,
+        "available_seats": 21,
         "course_price": 149
     },
     {
@@ -60,7 +60,7 @@
         "category":"normal",
         "image": "japanese_image.jpg",
         "instructor_Name": "Niyo Naka",
-        "available_seats": 20,
+        "available_seats": 19,
         "course_price": 149
     },
     {
@@ -68,7 +68,7 @@
         "category":"popular",
         "image": "japanese_image.jpg",
         "instructor_Name": "Abbi Gaggi",
-        "available_seats": 20,
+        "available_seats": 32,
         "course_price": 149
     },
     {
@@ -76,7 +76,7 @@
         "category":"normal",
         "image": "japanese_image.jpg",
         "instructor_Name": "Yong Kanaka",
-        "available_seats": 20,
+        "available_seats": 6,
         "course_price": 149
     },
     {
@@ -84,7 +84,7 @@
         "category":"normal",
         "image": "japanese_image.jpg",
         "instructor_Name": "Yuki Tanaka",
-        "available_seats": 20,
+        "available_seats": 55,
         "course_price": 149
     },
     {
@@ -92,7 +92,7 @@
         "category":"normal",
         "image": "japanese_image.jpg",
         "instructor_Name": "Hera jasta",
-        "available_seats": 20,
+        "available_seats": 24,
         "course_price": 149
     }
 ]

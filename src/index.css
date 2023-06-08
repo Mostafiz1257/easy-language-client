@@ -6,3 +6,6 @@
 .btn-style{
     @apply  text-white  hover:bg-[#263238] hover:text-white btn btn-sm px-5 rounded-2xl  bg-[#795548]
 }
+.title{
+    @apply text-center text-3xl   font-bold text-orange-700 underline py-12
+}
