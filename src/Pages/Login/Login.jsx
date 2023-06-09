@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
 import SocialLogin from '../components/SocialLogin/SocialLogin';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext)
     const { register, handleSubmit, reset } = useForm();
+    const navigate=useNavigate();
     const onSubmit = data => {
-        console.log(data);
         signIn(data.email,data.password)
         .then(result=>{
             const loggedUser = result.user;
-            console.log(loggedUser);
+            navigate('/')
         })
         .catch(error=>{
             console.log(error.message);

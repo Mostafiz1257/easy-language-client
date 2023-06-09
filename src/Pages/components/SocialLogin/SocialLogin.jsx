@@ -1,18 +1,20 @@
 import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 const SocialLogin = () => {
     const { googleSignIn } = useContext(AuthContext)
-
+    const navigate = useNavigate();
     const handleGoogle = () => {
         googleSignIn()
-        .then(result=>{
-            const loggedUser = result.user
-            console.log(loggedUser);
-        })
-        .catch(error=>{
-            console.log(error.message);
-        })
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser);
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
     }
     return (
         <div>

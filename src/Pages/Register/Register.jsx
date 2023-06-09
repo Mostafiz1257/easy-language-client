@@ -15,7 +15,7 @@ const Register = () => {
             .then(() => {
  
                 updateUserProfile(data.name, data.PhotoURL)
-                const saveUser = { name: data.name, email: data.email }
+                const saveUser = { name: data.name, email: data.email,photo:data.PhotoURL}
                 console.log(saveUser);
                 fetch('http://localhost:5000/users',{
                     method:'POST',

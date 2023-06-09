@@ -31,7 +31,20 @@ const Classes = ({ item }) => {
             })
         }
         else {
-            navigate('/login')
+            Swal.fire({
+                title: 'Please Login for add Your Class',
+                text: "",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Login!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login')
+                }
+              })
+           
         }
     }
     return (
