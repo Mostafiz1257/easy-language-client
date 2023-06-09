@@ -70,7 +70,7 @@ const MySelectedClass = (cls) => {
                                     <td>{cls.instructor_Name}</td>
                                     <td>{cls.course_price} $</td>
                                     <td><button onClick={()=>handleDelete(cls)} className=' btn btn-danger btn-sm bg-red-200 hover:bg-red-400'>Delete</button></td>
-                                    <td><button className='hover:bg-teal-400 btn btn-primary btn-sm bg-teal-200 text-black'>Pay</button></td>
+                                    <td><button className='hover:bg-green-400 btn border-0 btn-primary btn-sm bg-green-200 text-black'>Pay </button></td>
 
                                 </tr>)
                             }
