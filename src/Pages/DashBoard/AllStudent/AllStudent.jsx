@@ -17,7 +17,7 @@ const AllStudent = () => {
         .then(data=>{
             if(data.modifiedCount){
                 refetch();
-                Swal.fire(`${user.name} is now Admin` )
+                Swal.fire(`He is Now  Admin` )
             }
         })
     }
@@ -29,7 +29,7 @@ const AllStudent = () => {
         .then(data=>{
             if(data.modifiedCount){
                 refetch();
-                Swal.fire(`He added to  Instructor list.` )
+                Swal.fire(`He is now Instructor.` )
             }
         })
     }
@@ -60,11 +60,12 @@ const AllStudent = () => {
 
                                     </tr>
                                 </thead>
-                                <tbody className=' bg-orange-100 '>
+                                <tbody className=' bg-orange-100 font-bold'>
                                     {
                                         allStudent.map((cls, index) => <tr key={cls._id}>
                                             <th>{index + 1}</th>
-                                            <td className=' font-bold'></td>
+                                            {/* TODO: ADD IMAGE */}
+                                            <td ></td>
                                             <td>{cls.name}</td>
                                             <td>{cls.email} </td>
                                             <td>
