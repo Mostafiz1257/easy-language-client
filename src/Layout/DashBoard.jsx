@@ -31,8 +31,8 @@ const DashBoard = () => {
                             {
                                 isInstructor ? <>
                                     <li><Link to='/'> <FaHome></FaHome> Go Home</Link></li>
-                                    <li><Link to='/dashboard/'> <FaHotel></FaHotel> My Class</Link></li>
-                                    <li><Link to='/dashboard/enroll'> <FaHotel></FaHotel>Add a Class</Link></li>
+                                    <li><Link to='/dashboard/myClass'> <FaHotel></FaHotel> My Class</Link></li>
+                                    <li><Link to='/dashboard/addClass'> <FaHotel></FaHotel>Add a Class</Link></li>
                                 </> : <>
 
                                     <li><Link to='/'> <FaHome></FaHome> Home</Link></li>

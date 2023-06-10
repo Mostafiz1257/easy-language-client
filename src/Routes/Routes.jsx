@@ -14,6 +14,8 @@ import MySelectedClass from "../Pages/DashBoard/MySelectedClass";
 import EnrollClass from "../Pages/DashBoard/EnrollClass";
 import AllStudent from "../Pages/DashBoard/AllStudent/AllStudent";
 import Welcome from "../Pages/DashBoard/Welcome/Welcome";
+import AddClass from "../Pages/DashBoard/AddClass/AddClass";
+import MyClass from "../Pages/DashBoard/MyClass/MyClass";
 
 export const router = createBrowserRouter([
   {
@@ -67,6 +69,14 @@ export const router = createBrowserRouter([
       {
         path: 'allUsers',
         element: <AllStudent></AllStudent>
+      },
+      {
+        path:'addClass',
+        element:<AddClass></AddClass>
+      },
+      {
+        path:'myClass',
+        element:<MyClass></MyClass>
       }
     ]
   }
