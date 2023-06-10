@@ -13,6 +13,7 @@ import DashBoard from "../Layout/DashBoard";
 import MySelectedClass from "../Pages/DashBoard/MySelectedClass";
 import EnrollClass from "../Pages/DashBoard/EnrollClass";
 import AllStudent from "../Pages/DashBoard/AllStudent/AllStudent";
+import Welcome from "../Pages/DashBoard/Welcome/Welcome";
 
 export const router = createBrowserRouter([
   {
@@ -52,16 +53,20 @@ export const router = createBrowserRouter([
     element: <DashBoard></DashBoard>,
     children: [
       {
+        path: 'welcome',
+        element: <Welcome></Welcome>
+      },
+      {
         path: 'selectedClass',
         element: <MySelectedClass></MySelectedClass>
       },
       {
-        path:'enroll',
-        element:<EnrollClass></EnrollClass>
+        path: 'enroll',
+        element: <EnrollClass></EnrollClass>
       },
       {
-        path:'allUsers',
-        element:<AllStudent></AllStudent>
+        path: 'allUsers',
+        element: <AllStudent></AllStudent>
       }
     ]
   }

@@ -5,20 +5,19 @@ import { Carousel } from 'react-responsive-carousel';
 const Banner = () => {
     return (
         <>
-        <Carousel>
-                
-                
-                <div>
-                    <img src="https://i.ibb.co/qmVSB8h/b.png" /> 
-                </div>
+            <Carousel>
+
                 <div>
                     <img src="https://i.ibb.co/jHNzwBD/a.png" />
                 </div>
                 <div>
-                    <img src="https://i.ibb.co/jRhdX21/iii.jpg" />   
+                    <img src="https://i.ibb.co/qmVSB8h/b.png" />
                 </div>
                 <div>
-                    <img src="https://i.ibb.co/CbmJVdv/k.jpg" />   
+                    <img src="https://i.ibb.co/jRhdX21/iii.jpg" />
+                </div>
+                <div>
+                    <img src="https://i.ibb.co/CbmJVdv/k.jpg" />
                 </div>
             </Carousel>
         </>

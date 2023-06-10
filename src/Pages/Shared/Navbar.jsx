@@ -16,7 +16,7 @@ const Navbar = () => {
         <NavLink to='/allClasses'> <li><button className=' btn-style'>Classes</button></li></NavLink>
         {
             user? <>
-             <NavLink to='dashboard/selectedClass'> <li className=' btn-style'>DashBoard</li></NavLink>
+             <NavLink to='dashboard/welcome'> <li className=' btn-style'>DashBoard</li></NavLink>
             </> : <></>
         }
     </>
