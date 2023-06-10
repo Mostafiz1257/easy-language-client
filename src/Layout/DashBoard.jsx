@@ -7,7 +7,6 @@ import useInstructor from '../hooks/useInstructor';
 const DashBoard = () => {
     const [isAdmin] = useAdmin();
     const [isInstructor] = useInstructor();
-    console.log(isAdmin,isInstructor);
 
     return (
         <div className="drawer lg:drawer-open ">
