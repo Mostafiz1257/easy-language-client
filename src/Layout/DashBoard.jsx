@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { FaHome, FaHotel, FaUsers, } from 'react-icons/fa';
+import { FaHome, FaHotel, FaUsers } from 'react-icons/fa';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
 
@@ -42,6 +42,7 @@ const DashBoard = () => {
 
                         </>
                     }
+
                 </ul>
 
             </div>
