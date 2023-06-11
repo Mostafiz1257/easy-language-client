@@ -7,8 +7,8 @@ const PopularClasses = () => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => {
-                const popularClasses = data.filter(item => item.category === 'popular')
-                setClasses(popularClasses)
+                // const popularClasses = data.filter(item => item.category === 'popular')
+                setClasses(data)
             })
     }, [])
     return (
@@ -18,7 +18,7 @@ const PopularClasses = () => {
             </div>
             <div className=' grid lg:grid-cols-3 gap-5'>
                 {
-                    classes.map((item, index) => <Classes key={index} item={item}></Classes>)
+                    classes.slice(0,6).map((item, index) => <Classes key={index} item={item}></Classes>)
                 }
             </div>
         </>

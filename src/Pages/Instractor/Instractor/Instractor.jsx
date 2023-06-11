@@ -6,7 +6,7 @@ const Instractor = ({ teacher }) => {
         <>
 
             <div className="card w-96 bg-base-100 shadow-xl group">
-                <figure><img className=' group-hover:scale-110 transition duration-300 cursor-pointer' src={photo} alt="Shoes" /></figure>
+                <figure><img  className='object-cover w-64 rounded-lg h-64 group-hover:scale-110 transition duration-300 cursor-pointer' src={photo} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         {name}

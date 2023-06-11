@@ -56,7 +56,7 @@ const AllStudent = () => {
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Role</th>
-                                        <th>Role</th>
+                                        {/* <th>Role</th> */}
 
                                     </tr>
                                 </thead>
@@ -74,8 +74,8 @@ const AllStudent = () => {
                                                         cls.role === 'instructor' ? 'instructor' : <FaUser></FaUser>
                                                     }
                                                 </button>
-                                            </td>
-                                            <td>
+                                            {/* </td>
+                                            <td> */}
                                                 <button onClick={() => handleMakeAdmin
                                                     (cls)} className=' btn btn-danger btn-sm bg-green-200 hover:bg-green-400'>
                                                     {

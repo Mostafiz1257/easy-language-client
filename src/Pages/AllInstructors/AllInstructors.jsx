@@ -4,11 +4,18 @@ import Instractor from '../Instractor/Instractor/Instractor';
 const AllInstructors = () => {
     const [instructors, setInstructors] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/instructors')
+        // fetch('http://localhost:5000/instructors')
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         setInstructors(data)
+
+        //     })
+        fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => {
-                setInstructors(data)
-                
+
+                const popular = data.filter(item => item.role === 'instructor')
+                setInstructors(popular)
             })
     }, [])
     return (

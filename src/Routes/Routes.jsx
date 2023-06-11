@@ -16,6 +16,7 @@ import AllStudent from "../Pages/DashBoard/AllStudent/AllStudent";
 import Welcome from "../Pages/DashBoard/Welcome/Welcome";
 import AddClass from "../Pages/DashBoard/AddClass/AddClass";
 import MyClass from "../Pages/DashBoard/MyClass/MyClass";
+import TotalClass from "../Pages/DashBoard/TotalClass/TotalClass";
 
 export const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ export const router = createBrowserRouter([
       {
         path:'myClass',
         element:<MyClass></MyClass>
+      },
+      {
+        path:"totalClass",
+        element:<TotalClass></TotalClass>
       }
     ]
   }

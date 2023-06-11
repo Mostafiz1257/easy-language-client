@@ -2,11 +2,15 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useAdmin from '../../../../hooks/useAdmin';
+import useInstructor from '../../../../hooks/useInstructor';
 
 const Classes = ({ item }) => {
     const { language, image, instructor_Name, available_seats, course_price } = item
     const { user } = useContext(AuthContext)
     const navigate = useNavigate();
+    const [isAdmin] = useAdmin();
+    const [isInstructor]= useInstructor();
 
     const handleAddClass = (item) => {
         if (user && user.email) {
@@ -47,16 +51,17 @@ const Classes = ({ item }) => {
            
         }
     }
+    // https://i.ibb.co/Hpk8Xd4/japan.jpg
     return (
         <div className="card  w-96 mx-auto object-cover glass group">
-            <figure><img className='group-hover:scale-110 transition duration-200 ' src="https://i.ibb.co/Hpk8Xd4/japan.jpg" alt="car!" /></figure>
+            <figure><img className='w-64 group-hover:scale-110 transition duration-200 ' src={image} alt="car!" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-2xl font-bold text-orange-700 ">{language} Language</h2>
                 <h2 className="card-title">Instructor:  {instructor_Name}</h2>
                 <h2 className="card-title">Available Seats:  {available_seats}</h2>
                 <p className=' text-orange-700'>Price: {course_price}$</p>
                 <div className="card-actions justify-end">
-                    <button onClick={()=>handleAddClass(item)} className="btn btn-style">Enroll Now</button>
+                    <button disabled={isAdmin || isInstructor}  onClick={()=>handleAddClass(item)} className="btn btn-style">Enroll Now</button>
                 </div>
             </div>
         </div>

@@ -4,11 +4,11 @@ import Instractor from '../../Instractor/Instractor/Instractor';
 const PopularInstructor = () => {
     const [instructors, setInstructors] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/instructors')
+        fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => {
 
-                const popular = data.filter(item => item.category === 'popular')
+                const popular = data.filter(item => item.role === 'instructor')
                 setInstructors(popular)
             })
     }, [])
@@ -19,7 +19,7 @@ const PopularInstructor = () => {
         </div>
             <div className=' grid lg:grid-cols-3 gap-5'>
                 {
-                    instructors.map((teacher, index) => <Instractor key={index} teacher={teacher}></Instractor>)
+                    instructors.slice(0,6).map((teacher, index) => <Instractor key={index} teacher={teacher}></Instractor>)
                 }
 
             </div>

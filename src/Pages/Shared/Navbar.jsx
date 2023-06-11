@@ -50,7 +50,7 @@ const Navbar = () => {
                         user ? <>
                             <div className="avatar">
                                 <div className="w-12 rounded-full border-2 border-orange-800  ">
-                                    <img className=' cursor-pointer' onClick={() => setIsOpen(!isOpen)} src={user?.photoURL} />
+                                    <img className=' cursor-pointer ' referrerPolicy='no-referrer' onClick={() => setIsOpen(!isOpen)} src={user?.photoURL} />
                                 </div>
                             </div>
                             <button onClick={handleLogOut} className=' btn-style'>Log Out</button>

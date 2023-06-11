@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import Swal from 'sweetalert2';
 
 const image_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN
 const AddClass = () => {
+    const [axiosSecure] = useAxiosSecure();
     const { user } = useContext(AuthContext)
     const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        // const newData = { ...data, status: 'pending' }
-        // console.log(data);
         const formData = new FormData();
         formData.append('image', data.image[0])
         fetch(image_hosting_url, {
@@ -21,16 +22,25 @@ const AddClass = () => {
                 if (imageResponse.success) {
                     const imageURL = imageResponse.data.display_url;
                     const { language, course_price, available_seats, instructor_Email, instructor_Name } = data
-                    const newData = {language,course_price:parseFloat(course_price),available_seats,instructor_Email,instructor_Name,status:'pending',image:imageURL}
-                    console.log(newData);
+                    const newData = {language,course_price:parseFloat(course_price),available_seats:parseInt(available_seats),instructor_Email,instructor_Name,status:'pending',image:imageURL}
+                    // console.log(newData);
+                    axiosSecure.post('/classes',newData)
+                    .then(data=>{
+                        if(data.data.insertedId){
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'WOW...',
+                                text: 'New Class Pending for Admin Add',
+                                
+                              })
+                        }
+                    })
                 }
             })
     }
 
-    console.log(image_hosting_token);
     return (
         <>
-
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="card-body">
                     <div className=' md:flex '>
