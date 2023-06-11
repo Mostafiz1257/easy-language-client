@@ -4,13 +4,13 @@ import Instractor from '../Instractor/Instractor/Instractor';
 const AllInstructors = () => {
     const [instructors, setInstructors] = useState([])
     useEffect(() => {
-        // fetch('http://localhost:5000/instructors')
+        // fetch('https://easy-language-server.vercel.app/instructors')
         //     .then(res => res.json())
         //     .then(data => {
         //         setInstructors(data)
 
         //     })
-        fetch('http://localhost:5000/users')
+        fetch('https://easy-language-server.vercel.app/users')
             .then(res => res.json())
             .then(data => {
 

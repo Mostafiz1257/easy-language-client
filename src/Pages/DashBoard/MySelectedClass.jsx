@@ -19,7 +19,7 @@ const MySelectedClass = (cls) => {
             console.log(result);
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/myClass/${cls._id}`, {
+                fetch(`https://easy-language-server.vercel.app/myClass/${cls._id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

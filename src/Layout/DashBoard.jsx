@@ -23,15 +23,15 @@ const DashBoard = () => {
                     {
                         isAdmin ? <>
 
-                            <li><Link to='/'> <FaHome></FaHome> Go Home Page</Link></li>
+                            <li><Link to='/'> <FaHome></FaHome>  Home </Link></li>
                             <li><Link to='/dashboard/allUsers'> <FaUsers></FaUsers> Manager Student</Link></li>
                             <li><Link to='/dashboard/totalClass'> <FaHotel></FaHotel> All Classes</Link></li>
                         </> : <>
                             {
                                 isInstructor ? <>
-                                    <li><Link to='/'> <FaHome></FaHome> Go Home</Link></li>
-                                    <li><Link to='/dashboard/myClass'> <FaHotel></FaHotel> My Class</Link></li>
-                                    <li><Link to='/dashboard/addClass'> <FaHotel></FaHotel>Add a Class</Link></li>
+                                    <li><Link to='/'> <FaHome></FaHome>  Home</Link></li>
+                                    <li><Link to='/dashboard/myClass'> <FaHotel></FaHotel> My added Class</Link></li>
+                                    <li><Link to='/dashboard/addClass'> <FaHotel></FaHotel>Add a new Class</Link></li>
                                 </> : <>
 
                                     <li><Link to='/'> <FaHome></FaHome> Home</Link></li>

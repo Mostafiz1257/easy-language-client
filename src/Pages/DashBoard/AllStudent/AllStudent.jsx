@@ -5,36 +5,36 @@ import Swal from 'sweetalert2';
 
 const AllStudent = () => {
     const { data: allStudent = [], refetch } = useQuery(['users'], async () => {
-        const res = await fetch('http://localhost:5000/users')
+        const res = await fetch('https://easy-language-server.vercel.app/users')
         return res.json();
     })
 
     const handleMakeAdmin = (user) => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`,{
-            method:"PATCH"
+        fetch(`https://easy-language-server.vercel.app/users/admin/${user._id}`, {
+            method: "PATCH"
         })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.modifiedCount){
-                refetch();
-                Swal.fire(`He is Now  Admin` )
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    refetch();
+                    Swal.fire(`He is Now  Admin`)
+                }
+            })
     }
     const handleMakeInstructor = (user) => {
-        fetch(`http://localhost:5000/users/instructor/${user._id}`,{
-            method:"PATCH"
+        fetch(`https://easy-language-server.vercel.app/users/instructor/${user._id}`, {
+            method: "PATCH"
         })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.modifiedCount){
-                refetch();
-                Swal.fire(`He is now Instructor.` )
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    refetch();
+                    Swal.fire(`He is now Instructor.`)
+                }
+            })
     }
 
-   
+
 
     return (
         <>

@@ -39,14 +39,14 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
-           
-            if(currentUser){
-                axios.post('http://localhost:5000/jwt',{email:currentUser.email})
-                .then(data=>{
-                  localStorage.setItem('access-token',data.data.token)
-                })
+
+            if (currentUser) {
+                axios.post('https://easy-language-server.vercel.app/jwt', { email: currentUser.email })
+                    .then(data => {
+                        localStorage.setItem('access-token', data.data.token)
+                    })
             }
-            else{
+            else {
                 localStorage.removeItem('access-token')
             }
             setLoading(false)
