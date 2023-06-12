@@ -1,6 +1,7 @@
 import React from 'react';
 import useMyClass from '../../hooks/useMyClass';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const MySelectedClass = (cls) => {
     const [myClass, refetch] = useMyClass();
@@ -70,7 +71,11 @@ const MySelectedClass = (cls) => {
                                             <td>{cls.instructor_Name}</td>
                                             <td>{cls.course_price} $</td>
                                             <td><button onClick={() => handleDelete(cls)} className=' btn btn-danger btn-sm bg-red-200 hover:bg-red-400'>Delete</button></td>
-                                            <td><button className='hover:bg-green-400 btn border-0 btn-primary btn-sm bg-green-200 text-black'>Pay </button></td>
+                                            <td>
+                                                <Link to='/dashboard/payment'>
+                                                    <button className='hover:bg-green-400 btn border-0 btn-primary btn-sm bg-green-200 text-black'>Pay </button>
+                                                </Link>
+                                            </td>
 
                                         </tr>)
                                     }

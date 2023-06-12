@@ -25,7 +25,7 @@ const DashBoard = () => {
 
                             <li><Link to='/'> <FaHome></FaHome>  Home </Link></li>
                             <li><Link to='/dashboard/allUsers'> <FaUsers></FaUsers> Manager Student</Link></li>
-                            <li><Link to='/dashboard/totalClass'> <FaHotel></FaHotel> All Classes</Link></li>
+                            <li><Link to='/dashboard/totalClass'> <FaHotel></FaHotel> Manage Classes</Link></li>
                         </> : <>
                             {
                                 isInstructor ? <>

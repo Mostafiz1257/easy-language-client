@@ -65,7 +65,9 @@ const AllStudent = () => {
                                         allStudent.map((cls, index) => <tr key={cls._id}>
                                             <th>{index + 1}</th>
                                             {/* TODO: ADD IMAGE */}
-                                            <td ></td>
+                                            <td >
+                                                <img className='w-9' src={cls?.photo} alt="" />
+                                            </td>
                                             <td>{cls.name}</td>
                                             <td>{cls.email} </td>
                                             <td>

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAdmin from '../../../../hooks/useAdmin';
 import useInstructor from '../../../../hooks/useInstructor';
-
+import { delay, motion } from "framer-motion"
 
 const Classes = ({ item }) => {
     const { language, image, instructor_Name, available_seats, course_price } = item
@@ -53,9 +53,11 @@ const Classes = ({ item }) => {
 
         }
     }
-    // https://i.ibb.co/Hpk8Xd4/japan.jpg
+
+    const [rotate,setRotate]= useState(false)
+
     return (
-        <div className="card  w-96 mx-auto object-cover glass group">
+        <motion.div animate={{rotate: rotate ? 360: 0,}} transition={{type:'tween'}} onClick={()=>setRotate(!rotate)} className="card  w-96 mx-auto object-cover glass group">
             <figure><img className='w-64 group-hover:scale-110 transition duration-200 ' src={image} alt="car!" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-2xl font-bold text-orange-700 ">{language} Language</h2>
@@ -66,7 +68,7 @@ const Classes = ({ item }) => {
                     <button disabled={isAdmin || isInstructor} onClick={() => handleAddClass(item)} className="btn btn-style">Enroll Now</button>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
