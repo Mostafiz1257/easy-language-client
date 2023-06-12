@@ -15,7 +15,8 @@ const FeedBack = () => {
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Mark Henrey</h2>
-                            <p>I Love this Class.I want to visit this market everyday and there online thransport system is so well and you can easly buy there product as a good company they make my children Happy.</p>
+                            <p>I love this Organization.When I start to learn a new language that time it was so hard for me,I just want to use my own capability to learn new language.They help me a lot.Thank You
+                            </p>
 
                         </div>
                     </div>
@@ -25,7 +26,8 @@ const FeedBack = () => {
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Glen Maxwel</h2>
-                            <p>Just take it and I Love this toys.I want to visit this market everyday and there online thransport system is so well and you can easly buy there product as a good company they make my children Happy.Keep going</p>
+                            <p>I love this Organization.When I start to learn a new language that time it was so hard for me,I just want to use my own capability to learn new language.They help me a lot.Thank You
+                            </p>
 
                         </div>
                     </div>
@@ -35,7 +37,7 @@ const FeedBack = () => {
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Tim Devid</h2>
-                            <p>I want to visit this market everyday and there online thransport system is so well and you can easly buy there product as a good company they make my children Happy.</p>
+                            <p>I want to visit this class everyday and there online thransport system is so well and you can easly buy there product as a good company they make my children Happy.</p>
 
                         </div>
                     </div>
@@ -55,12 +57,10 @@ const FeedBack = () => {
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Mitchel Stack</h2>
-                            <p> Love this toys.I want to visit this market everyday and there online thransport system is so well and you can easly buy there product as a good company they make my children Happy.Go ahead.</p>
-
+                            <p>I love this Organization.When I start to learn a new language that time it was so hard for me,I just want to use my own capability to learn new language.They help me a lot.Thank You
+                            </p>
                         </div>
                     </div>
-
-
 
                 </div>
             </Marquee>

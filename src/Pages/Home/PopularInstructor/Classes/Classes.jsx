@@ -14,7 +14,8 @@ const Classes = ({ item }) => {
     const [isInstructor] = useInstructor();
 
 
-    const handleAddClass = (item) => {
+    const handleAddClass = (e) => {
+        e.currentTarget.disabled = true;
         if (user && user.email) {
             const saveClass = { student_Name: user.displayName, email: user.email, language_name: language, instructor_Name, course_price }
             fetch('https://easy-language-server.vercel.app/myClass', {
@@ -65,7 +66,12 @@ const Classes = ({ item }) => {
                 <h2 className="card-title">Available Seats:  {available_seats}</h2>
                 <p className=' text-orange-700'>Price: {course_price}$</p>
                 <div className="card-actions justify-end">
-                    <button disabled={isAdmin || isInstructor} onClick={() => handleAddClass(item)} className="btn btn-style">Enroll Now</button>
+                    <button disabled={isAdmin || isInstructor}
+
+                    //  onClick={() => handleAddClass(item)}
+                    onClick={handleAddClass}
+
+                      className="btn btn-style">Enroll Now</button>
                 </div>
             </div>
         </motion.div>

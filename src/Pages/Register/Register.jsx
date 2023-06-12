@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../components/SocialLogin/SocialLogin';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
-
+import { FaEye,FaEyeSlash } from 'react-icons/fa';
 const Register = () => {
     const { updateUserProfile, createUser } = useContext(AuthContext)
     const { register, handleSubmit, reset, formState: { errors },
@@ -54,7 +54,10 @@ const Register = () => {
             })
     }
     const watchPassword = watch('password');
-
+const [show,setShow] = useState(false)
+const handleShow=()=>{
+    setShow(!show)
+}
 
     return (
         <>
@@ -95,7 +98,8 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" placeholder="password"  {...register('password', { required: true, minLength: 6 })} className="input input-bordered" required />
+                                <input type={show ? 'text':'password'} placeholder="password"  {...register('password', { required: true, minLength: 6 })} className="input input-bordered" required />
+                                <p onClick={handleShow} className=' cursor-pointer absolute bottom-[360px] right-[50px]'> {show ? <FaEye></FaEye>:<FaEyeSlash></FaEyeSlash>}</p>
                                 {/* ----- */}
                                 {errors.password && (
                                     <p className="text-red-500">Password is required</p>
